@@ -3,55 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Puzzle</title>
+    <title>A Locked Box</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
     <link rel="icon" href="favicon.ico" />
     <style>
-      .lock {
-        fill: #c52f21;
+      .cookie {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      .cookie img {
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
     <main>
       <section class="container">
-        <!--Note to self, make a box with a padlock on it-->
-        <!--Now... for gift ideas? Battery sorter, food, gift cards-->
-        <!--Make a cookie clicker cloned game but Christmas themed with JS-->
-        <article role="group">
-          <div>
-            <h1>Welcome!</h1>
-            <p>Hey there!</p>
-          </div>
-            <!-- <img src="lock.svg" alt="lock" class="lock"/> -->
-        </article>
         <article>
-          <h1>Riddle</h1>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-        </article>
-        <article>
-          <h1>Riddle</h1>
+          <h1>Welcome!</h1>
           <p>
+            Hey there, you may have notice that your gift is locked, but fear
+            not! The combination can be found below.
+          </p>
+        </article>
+        <!-- !!!!!!!!!Chocolate coins!!!+a word about money!!!!!!!!!!!!!-->
+        <!-- Math Problem -->
+        <article>
+          <h1>1: Puzzle</h1>
+          <p>what does <mark>x</mark> equal:</p>
+          <p>x<sup>2</sup> + (12 * x) + 50% - 2/4 = 0</p>
+          <br />
+          <form role="group">
+            <input placeholder="Answer" type="number" id="answer-1" />
+            <input
+              type="submit"
+              value="Enter"
+              onclick="event.preventDefault()"
+            />
+          </form>
+        </article>
+        <!-- Word Games (ai generated) -->
+        <article>
+          <h1>2: Riddle</h1>
+          <blockquote>
             I am a number. If you add me to any number, that number stays the
             same. If you multiply any number by me, the result is always me.
             What number am I?
-          </p>
-        </article>
-        <article>
-          <h1>Riddle</h1>
-          <form role="search">
-            <input name="search" placeholder="Answer" />
-            <input type="submit" value="Enter" />
+          </blockquote>
+          <br />
+          <form role="group">
+            <input placeholder="Answer" type="number" id="answer-2" />
+            <input
+              type="submit"
+              value="Enter"
+              onclick="event.preventDefault()"
+            />
           </form>
         </article>
+        <!-- Morse Code -->
+        <article>
+          <h1>3: Code</h1>
+          <kbd>--.. . .-. ---</kbd>
+          <br /><br />
+          <form role="group">
+            <input placeholder="Answer" type="number" id="answer-3" />
+            <input
+              type="submit"
+              value="Enter"
+              onclick="event.preventDefault()"
+            />
+          </form>
+        </article>
+        <progress value="0" max="100" id="progress-bar"></progress>
+        <!-- Cookie clicker -->
         <article>
           <h1>Congrats!</h1>
-          <p>Have a cookie.</p>
+          <p>
+            If the bar above is full you have the locks combination! Have a
+            cookie. If it isn't full check the answers highlighted in red.
+          </p>
+          <div class="cookie">
+            <div>
+              <img src="cookie.svg" width="300px" id="cookie-image" />
+            </div>
+            <br />
+            <p>Cookies: <span id="cookie-count">0</span></p>
+          </div>
         </article>
       </section>
       <section class="container">
