@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Christmas Quest</title>
+    <title>Puzzle</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css"
     />
     <link rel="icon" href="favicon.ico" />
     <style>
-      #logo {
-        scale: 0.75;
+      .lock {
+        fill: #c52f21;
       }
     </style>
   </head>
@@ -21,15 +21,40 @@
         <!--Note to self, make a box with a padlock on it-->
         <!--Now... for gift ideas? Battery sorter, food, gift cards-->
         <!--Make a cookie clicker cloned game but Christmas themed with JS-->
-        <img src="logo.svg" id="logo" />
-        <article>
-          <h1>Welcome!</h1>
-          <p>
-            Hey there! Is this website an excuse to work more with web design
-            and javascript? Maybe, but it's also the way to unlock.
-          </p>
-          <button></button>
+        <article role="group">
+          <div>
+            <h1>Welcome!</h1>
+            <p>Hey there!</p>
+          </div>
+            <!-- <img src="lock.svg" alt="lock" class="lock"/> -->
         </article>
+        <article>
+          <h1>Riddle</h1>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+        </article>
+        <article>
+          <h1>Riddle</h1>
+          <p>
+            I am a number. If you add me to any number, that number stays the
+            same. If you multiply any number by me, the result is always me.
+            What number am I?
+          </p>
+        </article>
+        <article>
+          <h1>Riddle</h1>
+          <form role="search">
+            <input name="search" placeholder="Answer" />
+            <input type="submit" value="Enter" />
+          </form>
+        </article>
+        <article>
+          <h1>Congrats!</h1>
+          <p>Have a cookie.</p>
+        </article>
+      </section>
+      <section class="container">
         <p>Built with <a href="https://picocss.com/">Pico</a></p>
       </section>
     </main>
