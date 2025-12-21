@@ -34,20 +34,15 @@
             not! The combination can be found below.
           </p>
         </article>
-        <!-- !!!!!!!!!Chocolate coins!!!+a word about money!!!!!!!!!!!!!-->
         <!-- Math Problem -->
         <article>
           <h1>1: Puzzle</h1>
           <p>what does <mark>x</mark> equal:</p>
           <p>x<sup>2</sup> + (12 * x) + 50% - 2/4 = 0</p>
           <br />
-          <form role="group">
-            <input placeholder="Answer" type="number" id="answer-1" />
-            <input
-              type="submit"
-              value="Enter"
-              onclick="event.preventDefault()"
-            />
+          <form role="group" id="form1">
+            <input placeholder="Answer" type="number" id="question-1" />
+            <input type="submit" value="Enter" />
           </form>
         </article>
         <!-- Word Games (ai generated) -->
@@ -59,13 +54,9 @@
             What number am I?
           </blockquote>
           <br />
-          <form role="group">
-            <input placeholder="Answer" type="number" id="answer-2" />
-            <input
-              type="submit"
-              value="Enter"
-              onclick="event.preventDefault()"
-            />
+          <form role="group" id="form2">
+            <input placeholder="Answer" type="number" id="question-2" />
+            <input type="submit" value="Enter"/>
           </form>
         </article>
         <!-- Morse Code -->
@@ -73,22 +64,18 @@
           <h1>3: Code</h1>
           <kbd>--.. . .-. ---</kbd>
           <br /><br />
-          <form role="group">
-            <input placeholder="Answer" type="number" id="answer-3" />
-            <input
-              type="submit"
-              value="Enter"
-              onclick="event.preventDefault()"
-            />
+          <form role="group" id="form3">
+            <input placeholder="Answer" type="number" id="question-3" />
+            <input type="submit" value="Enter" />
           </form>
         </article>
-        <progress value="0" max="100" id="progress-bar"></progress>
+        <!-- <progress value="0" max="3" id="progress-bar"></progress> -->
         <!-- Cookie clicker -->
         <article>
           <h1>Congrats!</h1>
           <p>
-            If the bar above is full you have the locks combination! Have a
-            cookie. If it isn't full check the answers highlighted in red.
+            If all the answers are green you have the locks combination! Have a
+            cookie. If not, check the answers highlighted in red.
           </p>
           <div class="cookie">
             <div>
